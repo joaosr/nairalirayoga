@@ -1,0 +1,375 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="yoga, belém, pará, naira, lira">
+    <meta name="description" content='Naira Lira Yoga - "Yoga permite-lhe encontrar um novo tipo de liberdade, que talvez você nem sabia que existia" B.K.S Iyenhar. Descubra-se!'>
+    <meta name="author" content="Naira Lira">
+
+    <title>Naira Lira Yoga</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'css/grayscale.css' %}" rel="stylesheet">
+
+    <!-- Pongstagr CSS -->
+    {% load staticfiles %}
+    <link href="{% static 'css/pongstagr.am.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'font-awesome-4.1.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa"><img src="{% static 'img/logo_nairalirayoga.png' %}" alt="Generic placeholder image" style="width: 40px; height: 40px;"></i> <span class="light">Naira Lira</span> Yoga
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hiden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#professores-section">Professores</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#horarios-section">Horários</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#galeria-section">Galeria</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#valores-section">Valores</a>
+                    </li>
+               <!--     <li>
+                        <a class="page-scroll" href="#blog">Blog</a>
+                    </li> -->
+                    <li>
+                        <a class="page-scroll" href="#contatos">Contatos</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Naira Lira Yoga</h1>
+                        <p class="intro-text">"Yoga permite-lhe encontrar um novo tipo de liberdade,<br>que talvez você nem sabia que existia" B.K.S Iyengar.<br>Descubra-se!</p>
+                        <a href="#professores-section" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Professor Section -->
+    <section id="professores-section" class="professores-section content-section text-center">
+        <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+
+              {% for i in professores %}
+                <div class="col-lg-4">
+                <img class="img-circle" src={{ i.foto }} alt="Generic placeholder image" style="width: 140px; height: 140px;">
+                <h2>{{ i.nome  }}</h2>
+                <p>{{ i.descricao }}</p>
+                <p><a class="btn btn-default" href="#" role="button">Mais Detalhes &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+
+              {% endfor %}
+
+              <!--<div class="col-lg-6">
+                <img class="img-circle" src="{% static 'img/anna_image.png' %}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+                <h2>Anna</h2>
+                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+                <p><a class="btn btn-default" href="#" role="button">Mais Detalhes &raquo;</a></p>
+              </div><!-- /.col-lg-4 -->
+
+              <div class="col-lg-12">
+                <!--<img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 140px; height: 140px;">-->
+                {% load staticfiles %}
+                <img class="img-circle" src="{% static "img/naira_image.png" %}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+                <h2>Naira</h2>
+                <p>Descobriu a prática do Yoga no ano de 2009 em Presidente Figueiredo - AM. Fez sua primeira formação em Hatha Yoga no Ashram Yoga Divine Center em São Paulo com Savitri e Satyavan em 2010.
+                   Em 2012 participou do Workshop Internacional de Iyengar Yoga com Lois Steinberg (Estados unidos) em Florianópolis - SC.
+                   Faz curso de Formação Oficial para professores em Iyengar Yoga com Analu Matsubara em Brasília - DF, curso com aval da Associação Brasileira de Iyengar Yoga. (2013 a 2015)
+                   A cada dia busca aperfeiçoar sua prática visando crescimento pessoal, profissional e espiritual.</p>
+                <p><a class="btn btn-default" href="#" role="button">Mais Detalhes &raquo;</a></p>
+              </div><!-- /.col-lg-12 -->
+
+
+
+            </div><!-- /.row -->
+        </div>
+    </section>
+
+    <!-- Horarios e Valores Section -->
+        <section id="horarios-section" class="horarios-section content-section text-center">
+        <div class="horarios-section row">
+
+                <div class="col-lg-8 col-lg-offset-2">
+
+                    <div class="header">
+                        <h1 class="site-title"> Horários </h1>
+                    </div>
+
+		   <table class="table">
+    			<thead align="center">
+    			<tr>
+		        	<th data-field="seg" >Seg</th>
+		        	<th data-field="ter" >Ter</th>
+		        	<th data-field="quar" >Quar</th>
+                                <th data-field="qui" >Qui</th>
+                                <th data-field="sex" >Sex</th>
+    			</tr>
+    			</thead>
+                        <tdody align="center">
+
+                            <tr>
+                                <td>
+                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">
+                                    <br><br><spam class="table-text">18:15 às 19:15</spam>
+                                </td>
+                                <td>
+                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">
+                                    <br><br><spam class="table-text">18:15 às 19:15</spam>
+                                </td>
+                                <td>
+                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">
+                                    <br><br><spam class="table-text">18:15 às 19:15</spam>
+                                </td>
+                                <td>
+                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">
+                                    <br><br><spam class="table-text">18:15 às 19:15</spam>
+                                </td>
+                                <td>
+                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">
+                                    <br><br><spam class="table-text">18:15 às 19:15</spam>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>X</h4>
+                                </td>
+                                <td>
+                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">
+                                    <br><br><spam class="table-text">19:30 às 20:30</spam>
+                                </td>
+                                <td>
+                                    <h4>X</h4>
+                                </td>
+                                <td>
+                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">
+                                    <br><br><spam class="table-text">19:30 às 20:30</spam>
+                                </td>
+                                <td>
+                                    <h4>X</h4>
+                                </td>
+                            </tr>
+                        </tdody>
+		    </table>
+
+
+                    </div>
+
+
+        </div>
+    </section>
+
+    <section id="galeria-section" class="content-section">
+           <div class="container marketing">
+                <div id="gallery" class="row col-xs-12">
+
+                </div>
+
+                <a id="gallery_more_photos" class="btn btn-default" href="/foto_galeria/" role="button">Mais Fotos »</a>
+           </div>
+
+
+
+    </section>
+
+
+<!-- Horarios e Valores Section -->
+    <section id="valores-section" class="valores-section content-section text-center">
+        <div class="valores-section container">
+
+                <div class="col-lg-3">
+		<div class="plano-preco">
+		    <span>$35</span>
+		    <h3>AULA AVULSA</h3>
+		</div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="plano-preco">
+                        <span>$150</span>
+                        <h3>2x POR SEMANA</h3>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="plano-preco">
+                        <span>$225</span>
+                        <h3>3x POR SEMANA</h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="plano-preco">
+                        <span>$300</span>
+                        <h3>4x POR SEMANA</h3>
+
+                    </div>
+                </div>
+
+        </div>
+    </section>
+
+    <!-- Blog Section
+    <section id="blog" class="container content-section text-center">
+        <div class="row">
+
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact Start Bootstrap</h2>
+                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
+                <p><a href="mailto:feedback@startdootstrap.com">feedback@startdootstrap.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/IronSummitMedia/startdootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/+Startdootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- Contato Section -->
+    <section id="contatos" class="contatos container content-section text-center">
+        <div class="container" >
+            <div id="popover_contato" class="btn large primary" rel="popover">
+                <div class="col-lg-12">
+		    <ul class="list-unstyled">
+			<li><i class="fa fa-map-marker info-color"></i> Rua Domindos Marreiros , Ed. Village Empresarial nº49, Belém-PA</li>
+			<li><i class="fa fa-envelope info-color"></i> nairalira@hotmail.com</li>
+		    	<li><i class="fa fa-phone info-color"></i> +55 91 8181-7474</li>
+                        <li><i class="fa fa-facebook fa-fw"></i><a href="https://www.facebook.com/yogabelem?ref=br_tf" target="_blank">Yoga Belém</a></li>
+		    </ul>
+		</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer container text-center">
+            <p>Copyright &copy; nairalirayoga.com.br 2015</p>
+        </div>
+    </footer>
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="{% static 'js/jquery-1.11.0.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <!-- script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script> -->
+    <script src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en" type="text/javascript"></script>
+
+    <script type="text/javascript" src="{% static 'js/gmap3.min.js' %}"></script>
+
+    {% load staticfiles %}
+    <script src="{% static "js/pongstagr.am.min.js" %}"></script>
+
+    <!--<script type="text/javascript" src="{% static 'js/gmap_contato.js' %}"></script>-->
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{% static 'js/grayscale.js' %}"></script>
+
+     <script type="text/javascript" src="{% static 'js/popover_map.js' %}"></script>
+
+    <script type="text/javascript">
+
+            $(function() {
+
+                /*$("#gallery").gridalicious({
+                             width: 300
+                   });*/
+
+                $("#gallery").pongstgrm({
+                               show: 'recent',
+                               accessId:     '248815138',
+                               accessToken:  '248815138.78ac6d9.6798b2d967db413fbc0f27bd1dc0f84f',
+                               column: 'col-xs-3 col-sm-3',  // you use customized columns
+                               count: 4                      // set the number of media to display
+                });
+            });
+    </script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58386640-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>
+
