@@ -154,29 +154,29 @@
 
               <div class="row">
                   <ul>
-                  {% for value in horarios %}
-                      <li>
+                  {% for horario in horarios %}
+                      <li style="list-style: outside none none;">
                         <div class="row">
                             <div id="weekdays" class="col-xs-2">
-                                <h3>{{ key }}</h3>
+                                <h3>{{ horario.dia_semana }}</h3>
                             </div>
-{#                            <div class="col-xs-10">#}
-{#                              <ul id="weekdays_content">#}
-{#                                  {% for h in values.items %}#}
-{#                                        <li>#}
-{#                                          <div class="row">#}
-{#                                            <div id="description" class="col-xs-8">#}
-{#                                            <p>{{ h.descricao }}</p>#}
-{#                                            </div>#}
-{#                                            <div id="info" class="col-xs-4">#}
-{#                                              <div id="horario">{{ h.horario }}</div>#}
-{#                                              <div id="local">{{ h.local }}</div>#}
-{#                                            </div>#}
-{#                                          </div>#}
-{#                                        </li>#}
-{#                                  {% endfor %}#}
-{#                              </ul>#}
-{#                            </div>#}
+                            <div class="col-xs-10">
+                              <ul id="weekdays_content">
+                                  {% for h in horario.values %}
+                                        <li>
+                                          <div class="row">
+                                            <div id="description" class="col-xs-8">
+                                            <p>{{ h.descricao }}</p>
+                                            </div>
+                                            <div id="info" class="col-xs-4">
+                                              <div id="horario">{{ h.horario }}</div>
+                                              <div id="local">{{ h.local }}</div>
+                                            </div>
+                                          </div>
+                                        </li>
+                                  {% endfor %}
+                              </ul>
+                            </div>
                         </div>
                       </li>
                   {% endfor %}
