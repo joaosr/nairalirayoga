@@ -367,15 +367,15 @@ body {
 }
 
 .site-title {
-    color: #FFF9F6;
+    color: #555;
 }
 
 
 .horarios-section {
     width: 100%;
     padding: 50px 0;
-    color: #333;
-    background-color: #5E5957;
+    /*color: #333;*/
+    background-color: #EEE;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -396,7 +396,7 @@ table{
   border: 15px solid #FF7A46;
 }
 
-table-text{
+.table-text{
     font-size: inherit;    
 }
 
@@ -538,4 +538,18 @@ footer{
 .footer{
     background: #ff7a46;
     color: #FFF9F6;
+}
+
+
+#weekdays_content {
+  border-left: 1px solid #ff7a46;
+}
+
+#info {
+  border-left: 1px solid #BBB;
+}
+
+#weekdays_content li {
+  list-style: outside none none;
+  margin: 10px;
 }

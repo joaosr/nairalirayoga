@@ -152,61 +152,94 @@
                         <h1 class="site-title"> Horários </h1>
                     </div>
 
-		   <table class="table">
-    			<thead align="center">
-    			<tr>
-		        	<th data-field="seg" >Seg</th>
-		        	<th data-field="ter" >Ter</th>
-		        	<th data-field="quar" >Quar</th>
-                                <th data-field="qui" >Qui</th>
-                                <th data-field="sex" >Sex</th>
-    			</tr>
-    			</thead>
-                        <tdody align="center">
+              <div class="row">
+                  <ul>
+                  {% for value in horarios %}
+                      <li>
+                        <div class="row">
+                            <div id="weekdays" class="col-xs-2">
+                                <h3>{{ key }}</h3>
+                            </div>
+{#                            <div class="col-xs-10">#}
+{#                              <ul id="weekdays_content">#}
+{#                                  {% for h in values.items %}#}
+{#                                        <li>#}
+{#                                          <div class="row">#}
+{#                                            <div id="description" class="col-xs-8">#}
+{#                                            <p>{{ h.descricao }}</p>#}
+{#                                            </div>#}
+{#                                            <div id="info" class="col-xs-4">#}
+{#                                              <div id="horario">{{ h.horario }}</div>#}
+{#                                              <div id="local">{{ h.local }}</div>#}
+{#                                            </div>#}
+{#                                          </div>#}
+{#                                        </li>#}
+{#                                  {% endfor %}#}
+{#                              </ul>#}
+{#                            </div>#}
+                        </div>
+                      </li>
+                  {% endfor %}
+                  </ul>
 
-                            <tr>
-                                <td>
-                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">
-                                    <br><br><spam class="table-text">18:15 às 19:15</spam>
-                                </td>
-                                <td>
-                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">
-                                    <br><br><spam class="table-text">18:15 às 19:15</spam>
-                                </td>
-                                <td>
-                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">
-                                    <br><br><spam class="table-text">18:15 às 19:15</spam>
-                                </td>
-                                <td>
-                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">
-                                    <br><br><spam class="table-text">18:15 às 19:15</spam>
-                                </td>
-                                <td>
-                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">
-                                    <br><br><spam class="table-text">18:15 às 19:15</spam>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>X</h4>
-                                </td>
-                                <td>
-                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">
-                                    <br><br><spam class="table-text">19:30 às 20:30</spam>
-                                </td>
-                                <td>
-                                    <h4>X</h4>
-                                </td>
-                                <td>
-                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">
-                                    <br><br><spam class="table-text">19:30 às 20:30</spam>
-                                </td>
-                                <td>
-                                    <h4>X</h4>
-                                </td>
-                            </tr>
-                        </tdody>
-		    </table>
+
+              </div>
+
+{#		   <table class="table">#}
+{#    			<thead align="center">#}
+{#    			<tr>#}
+{#		        	<th data-field="seg" >Seg</th>#}
+{#		        	<th data-field="ter" >Ter</th>#}
+{#		        	<th data-field="quar" >Quar</th>#}
+{#                                <th data-field="qui" >Qui</th>#}
+{#                                <th data-field="sex" >Sex</th>#}
+{#    			</tr>#}
+{#    			</thead>#}
+{#                        <tdody align="center">#}
+{##}
+{#                            <tr>#}
+{#                                <td>#}
+{#                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">#}
+{#                                    <br><br><spam class="table-text">18:15 às 19:15</spam>#}
+{#                                </td>#}
+{#                                <td>#}
+{#                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">#}
+{#                                    <br><br><spam class="table-text">18:15 às 19:15</spam>#}
+{#                                </td>#}
+{#                                <td>#}
+{#                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">#}
+{#                                    <br><br><spam class="table-text">18:15 às 19:15</spam>#}
+{#                                </td>#}
+{#                                <td>#}
+{#                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">#}
+{#                                    <br><br><spam class="table-text">18:15 às 19:15</spam>#}
+{#                                </td>#}
+{#                                <td>#}
+{#                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">#}
+{#                                    <br><br><spam class="table-text">18:15 às 19:15</spam>#}
+{#                                </td>#}
+{#                            </tr>#}
+{#                            <tr>#}
+{#                                <td>#}
+{#                                    <h4>X</h4>#}
+{#                                </td>#}
+{#                                <td>#}
+{#                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">#}
+{#                                    <br><br><spam class="table-text">19:30 às 20:30</spam>#}
+{#                                </td>#}
+{#                                <td>#}
+{#                                    <h4>X</h4>#}
+{#                                </td>#}
+{#                                <td>#}
+{#                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">#}
+{#                                    <br><br><spam class="table-text">19:30 às 20:30</spam>#}
+{#                                </td>#}
+{#                                <td>#}
+{#                                    <h4>X</h4>#}
+{#                                </td>#}
+{#                            </tr>#}
+{#                        </tdody>#}
+{#		    </table>#}
 
 
                     </div>
