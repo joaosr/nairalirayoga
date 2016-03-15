@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from django.test import TestCase
-from nairalirayoga.core.models import Horario
+from nairalirayoga.core.models import Horario, Preco, Professor
 
 class HorarioModelTest(TestCase):
     def setUp(self):
@@ -22,3 +22,38 @@ class HorarioModelTest(TestCase):
 
     def test_str(self):
         self.assertEqual('Segunda-feira', str(self.obj))
+
+class PrecoModelTest(TestCase):
+    def setUp(self):
+        self.obj = Preco(
+            valor=130.0,
+            dias='3x por semana',
+            atividade='aula de yoga',
+        )
+
+        self.obj.save()
+
+    def test_create(self):
+        self.assertTrue(Preco.objects.exists())
+
+    def test_create_at(self):
+        """ Horario must have an auto created at attr."""
+        self.assertIsInstance(self.obj.created_at, datetime)
+
+class ProfessorModelTest(TestCase):
+    def setUp(self):
+        self.obj = Professor(
+            nome='Naira',
+            sobrenome='Lira',
+            descricao='Ótima professora',
+            foto='naira_lira.png',
+        )
+
+        self.obj.save()
+
+    def test_create(self):
+        self.assertTrue(Professor.objects.exists())
+
+    def test_create_at(self):
+        """ Horario must have an auto created at attr."""
+        self.assertIsInstance(self.obj.created_at, datetime)

@@ -107,11 +107,11 @@
             <!-- Three columns of text below the carousel -->
             <div class="row">
 
-              {% for i in professores %}
-                <div class="col-lg-4">
-                <img class="img-circle" src={{ i.foto }} alt="Generic placeholder image" style="width: 140px; height: 140px;">
-                <h2>{{ i.nome  }}</h2>
-                <p>{{ i.descricao }}</p>
+              {% for p in professores %}
+                <div class="col-lg-12">
+                <img class="img-circle" src={{ p.foto }} alt="Generic placeholder image" style="width: 140px; height: 140px;">
+                <h2>{{ p.nome }} {{ p.sobrenome }}</h2>
+                <p>{{ p.descricao }}</p>
                 <p><a class="btn btn-default" href="#" role="button">Mais Detalhes &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
 

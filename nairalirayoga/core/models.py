@@ -9,7 +9,6 @@ class Horario(models.Model):
     SEXTA = 'Sex'
     SABADO = 'Sáb'
     DOMINGO = 'Sex'
-
     DAYS_OF_WEEK = (
         (SEGUNDA, 'Segunda-feira'),
         (TERCA, 'Terça-feira'),
@@ -32,3 +31,48 @@ class Horario(models.Model):
 
     def __str__(self):
         return self.dia_semana
+
+class Preco(models.Model):
+    D1 = '1x por semana'
+    D2 = '2x por semana'
+    D3 = '3x por semana'
+    D4 = '4x por semana'
+    D5 = '5x por semana'
+    D6 = '6x por semana'
+    D7 = '7x por semana'
+    DX = 'Aula livre'
+    DAYS = (
+        (D1, D1),
+        (D2, D2),
+        (D3, D3),
+        (D4, D4),
+        (D5, D5),
+        (D6, D6),
+        (D7, D7),
+        (DX, DX),
+    )
+    valor = models.FloatField('Preço')
+    dias = models.CharField('Dias por semana', max_length=13, choices=DAYS)
+    atividade = models.CharField('Atividade', max_length=50)
+    created_at = models.DateTimeField('Criado em', auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'Preços'
+        verbose_name = 'Preço'
+
+    def __str__(self):
+        return self.atividade
+
+class Professor(models.Model):
+    nome = models.CharField('Nome', max_length=20)
+    sobrenome = models.CharField('Sobrenome', max_length=20)
+    descricao = models.TextField('Descrição')
+    foto = models.ImageField('Foto', upload_to='media/img/', default='media/img/no-img-professor.jpg')
+    created_at = models.DateTimeField('Criado em', auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'Professor'
+        verbose_name = 'Professor'
+
+    def __str__(self):
+        return self.nome + " " + self.sobrenome
