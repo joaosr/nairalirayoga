@@ -52,9 +52,13 @@ class Preco(models.Model):
         (D7, D7),
         (DX, DX),
     )
+    AT1 = 'Aula de Yoga'
+    ATIVIDADES = (
+        (AT1, AT1),
+    )
     valor = models.FloatField('Preço')
     dias = models.CharField('Dias por semana', max_length=13, choices=DAYS)
-    atividade = models.CharField('Atividade', max_length=50)
+    atividade = models.CharField('Atividade', max_length=50, choices=ATIVIDADES)
     created_at = models.DateTimeField('Criado em', auto_now_add=True)
 
     class Meta:

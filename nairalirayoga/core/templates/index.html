@@ -182,37 +182,50 @@
 <!-- Horarios e Valores Section -->
     <section id="valores-section" class="valores-section content-section text-center">
         <div class="valores-section container">
-
-                <div class="col-lg-3">
-		<div class="plano-preco">
-		    <span>$35</span>
-		    <h3>AULA AVULSA</h3>
-		</div>
-                </div>
-
-                <div class="col-lg-3">
-                    <div class="plano-preco">
-                        <span>$150</span>
-                        <h3>2x POR SEMANA</h3>
-
+            {% for preco in precos %}
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3>{{ preco.atividade }}</h3>
                     </div>
-                </div>
+                <div>
+                <div class="row">
+                    {% for p in preco.values %}
+                        <div class="col-lg-3">
+                            <div class="plano-preco">
+                                <span>$ {{ p.valor }}</span>
+                                <h3>{{ p.dias }}</h3>
+                            </div>
+                        </div>
+                    {% endfor %}
+                <div>
 
-                <div class="col-lg-3">
-                    <div class="plano-preco">
-                        <span>$225</span>
-                        <h3>3x POR SEMANA</h3>
-                    </div>
-                </div>
-
-                <div class="col-lg-3">
-                    <div class="plano-preco">
-                        <span>$300</span>
-                        <h3>4x POR SEMANA</h3>
-
-                    </div>
-                </div>
-
+            {% endfor %}
+{#            <div class="col-lg-3">#}
+{#                <div class="plano-preco">#}
+{#                    <span>$35</span>#}
+{#                    <h3>AULA AVULSA</h3>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="col-lg-3">#}
+{#                <div class="plano-preco">#}
+{#                    <span>$150</span>#}
+{#                    <h3>2x POR SEMANA</h3>#}
+{##}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="col-lg-3">#}
+{#                <div class="plano-preco">#}
+{#                    <span>$225</span>#}
+{#                    <h3>3x POR SEMANA</h3>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="col-lg-3">#}
+{#                <div class="plano-preco">#}
+{#                    <span>$300</span>#}
+{#                    <h3>4x POR SEMANA</h3>#}
+{##}
+{#                </div>#}
+{#            </div>#}
         </div>
     </section>
 
