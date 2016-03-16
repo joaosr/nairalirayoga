@@ -103,41 +103,16 @@
     <!-- Professor Section -->
     <section id="professores-section" class="professores-section content-section text-center">
         <div class="container marketing">
-
             <!-- Three columns of text below the carousel -->
             <div class="row">
-
-              {% for p in professores %}
-                <div class="col-lg-12">
-                <img class="img-circle" src={{ p.foto }} alt="Generic placeholder image" style="width: 140px; height: 140px;">
-                <h2>{{ p.nome }} {{ p.sobrenome }}</h2>
-                <p>{{ p.descricao }}</p>
-                <p><a class="btn btn-default" href="#" role="button">Mais Detalhes &raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
-
-              {% endfor %}
-
-              <!--<div class="col-lg-6">
-                <img class="img-circle" src="{% static 'img/anna_image.png' %}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-                <h2>Anna</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                <p><a class="btn btn-default" href="#" role="button">Mais Detalhes &raquo;</a></p>
-              </div><!-- /.col-lg-4 -->
-
-              <div class="col-lg-12">
-                <!--<img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 140px; height: 140px;">-->
-                {% load staticfiles %}
-                <img class="img-circle" src="{% static "img/naira_image.png" %}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-                <h2>Naira</h2>
-                <p>Descobriu a prática do Yoga no ano de 2009 em Presidente Figueiredo - AM. Fez sua primeira formação em Hatha Yoga no Ashram Yoga Divine Center em São Paulo com Savitri e Satyavan em 2010.
-                   Em 2012 participou do Workshop Internacional de Iyengar Yoga com Lois Steinberg (Estados unidos) em Florianópolis - SC.
-                   Faz curso de Formação Oficial para professores em Iyengar Yoga com Analu Matsubara em Brasília - DF, curso com aval da Associação Brasileira de Iyengar Yoga. (2013 a 2015)
-                   A cada dia busca aperfeiçoar sua prática visando crescimento pessoal, profissional e espiritual.</p>
-                <p><a class="btn btn-default" href="#" role="button">Mais Detalhes &raquo;</a></p>
-              </div><!-- /.col-lg-12 -->
-
-
-
+                {% for p in professores %}
+                    <div class="col-lg-12">
+                        <img class="img-circle" src="media/{{ p.foto }}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+                        <h2>{{ p.nome }} {{ p.sobrenome }}</h2>
+                        <p>{{ p.descricao }}</p>
+                        <p><a class="btn btn-default" href="#" role="button">Mais Detalhes &raquo;</a></p>
+                    </div><!-- /.col-lg-4 -->
+                {% endfor %}
             </div><!-- /.row -->
         </div>
     </section>
@@ -184,65 +159,7 @@
 
 
               </div>
-
-{#		   <table class="table">#}
-{#    			<thead align="center">#}
-{#    			<tr>#}
-{#		        	<th data-field="seg" >Seg</th>#}
-{#		        	<th data-field="ter" >Ter</th>#}
-{#		        	<th data-field="quar" >Quar</th>#}
-{#                                <th data-field="qui" >Qui</th>#}
-{#                                <th data-field="sex" >Sex</th>#}
-{#    			</tr>#}
-{#    			</thead>#}
-{#                        <tdody align="center">#}
-{##}
-{#                            <tr>#}
-{#                                <td>#}
-{#                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">#}
-{#                                    <br><br><spam class="table-text">18:15 às 19:15</spam>#}
-{#                                </td>#}
-{#                                <td>#}
-{#                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">#}
-{#                                    <br><br><spam class="table-text">18:15 às 19:15</spam>#}
-{#                                </td>#}
-{#                                <td>#}
-{#                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">#}
-{#                                    <br><br><spam class="table-text">18:15 às 19:15</spam>#}
-{#                                </td>#}
-{#                                <td>#}
-{#                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">#}
-{#                                    <br><br><spam class="table-text">18:15 às 19:15</spam>#}
-{#                                </td>#}
-{#                                <td>#}
-{#                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">#}
-{#                                    <br><br><spam class="table-text">18:15 às 19:15</spam>#}
-{#                                </td>#}
-{#                            </tr>#}
-{#                            <tr>#}
-{#                                <td>#}
-{#                                    <h4>X</h4>#}
-{#                                </td>#}
-{#                                <td>#}
-{#                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">#}
-{#                                    <br><br><spam class="table-text">19:30 às 20:30</spam>#}
-{#                                </td>#}
-{#                                <td>#}
-{#                                    <h4>X</h4>#}
-{#                                </td>#}
-{#                                <td>#}
-{#                                    <img class="img-circle" src="{% static 'img/naira_image.png' %}" alt="Generic placeholder image" style="width: 45px; height: 45px;">#}
-{#                                    <br><br><spam class="table-text">19:30 às 20:30</spam>#}
-{#                                </td>#}
-{#                                <td>#}
-{#                                    <h4>X</h4>#}
-{#                                </td>#}
-{#                            </tr>#}
-{#                        </tdody>#}
-{#		    </table>#}
-
-
-                    </div>
+        </div>
 
 
         </div>

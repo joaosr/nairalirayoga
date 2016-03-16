@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.urlresolvers import reverse
 
 
 class Horario(models.Model):
@@ -63,11 +64,21 @@ class Preco(models.Model):
     def __str__(self):
         return self.atividade
 
+def upload_location(instance, filename):
+    return "%s/%s" % (instance.id, filename)
+
 class Professor(models.Model):
     nome = models.CharField('Nome', max_length=20)
     sobrenome = models.CharField('Sobrenome', max_length=20)
     descricao = models.TextField('Descrição')
-    foto = models.ImageField('Foto', upload_to='media/img/', default='media/img/no-img-professor.jpg')
+    foto = models.ImageField('Foto', upload_to=upload_location,
+                             null=True,
+                             blank=True,
+                             height_field="height_field",
+                             width_field="width_field",
+                             default='no-img-professor.png')
+    height_field = models.IntegerField('Largura', default=0)
+    width_field = models.IntegerField('Altura', default=0)
     created_at = models.DateTimeField('Criado em', auto_now_add=True)
 
     class Meta:
@@ -76,3 +87,6 @@ class Professor(models.Model):
 
     def __str__(self):
         return self.nome + " " + self.sobrenome
+
+    def get_absolute_url(self):
+        return reverse("posts:detail", kwargs={"id": self.id})

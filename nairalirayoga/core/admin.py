@@ -18,7 +18,7 @@ class PrecoModelAdmin(admin.ModelAdmin):
 admin.site.register(Preco, PrecoModelAdmin)
 
 class ProfessorModelAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'sobrenome', 'descricao', 'foto', 'created_at')
+    list_display = ('nome', 'sobrenome', 'descricao', 'width_field', 'height_field', 'foto', 'created_at')
     date_hierarchy = 'created_at'
     search_fields = ('nome', 'sobrenome', 'descricao', 'foto', 'created_at')
     list_filter = ('nome',)
