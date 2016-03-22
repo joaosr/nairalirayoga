@@ -66,7 +66,7 @@ a:focus {
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: #000;
+    background-color: #02C18F;
 }
 
 .navbar-custom .navbar-brand {
@@ -112,10 +112,11 @@ a:focus {
 
 @media(min-width:767px) {
     .navbar {
-        padding: 20px 0;
-        border-bottom: 0;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255,255,255,.3);
         letter-spacing: 1px;
         background: 0 0;
+        background-color: #02C18F;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -123,7 +124,7 @@ a:focus {
 
     .top-nav-collapse {
         padding: 0;
-        background-color: #ff7a46;
+        background-color: #02C18F;
     }
 
     .navbar-custom.top-nav-collapse {
@@ -138,7 +139,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/intro-orange.jpg) no-repeat bottom center scroll;
+    /*background: url(../img/intro-orange.jpg) no-repeat bottom center scroll;*/
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -299,17 +300,17 @@ a:focus {
 }
 
 .btn-default {
-    border: 1px solid #ff7a46;
-    color: #ff7a46;
+    border: 1px solid #02C18F;
+    color: #02C18F;
     background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #ff7a46;
+    border: 1px solid #02C18F;
     outline: 0;
     color: #fff;
-    background-color: #ff7a46;
+    background-color: #02C18F;
 }
 
 ul.banner-social-buttons {
@@ -415,7 +416,7 @@ table > tbody > tr > td{
   background: #fff;
 }
 .valores-section {
-	background: #ff7a46;
+	background: #02C18F;
 	text-align: center;
 	/*width: 892px; total computed width = 222 x 3 + 226 */
 }
@@ -467,18 +468,18 @@ table > tbody > tr > td{
    	font-size: 20px;
         color: #fff;
 	background-image: -moz-linear-gradient(#eee,#ddd);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#ff7a46), to(#ff7a46));    
-	background-image: -webkit-linear-gradient(#ff7a46, #ff7a46);
-	background-image: -o-linear-gradient(#ff7a46, #ff7a46);
-	background-image: -ms-linear-gradient(#ff7a46, #ff7a46);
-	background-image: linear-gradient(#ff7a46, #ff7a46);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#02C18F), to(#02C18F));    
+	background-image: -webkit-linear-gradient(#02C18F, #02C18F);
+	background-image: -o-linear-gradient(#02C18F, #02C18F);
+	background-image: -ms-linear-gradient(#02C18F, #02C18F);
+	background-image: linear-gradient(#02C18F, #02C18F);
 }*/
 
 .valores-section .plano-preco span {
 	display: block;
 	font: bold 25px/130px Georgia, Serif;
         color: #FFF9F6;
-	background: #ff7a46; 
+	background: #02C18F; 
 	border: 5px double #FFF9F6;
 	height: 130px;
 	width: 130px;
@@ -486,18 +487,18 @@ table > tbody > tr > td{
 	-moz-border-radius: 100px;
 	-webkit-border-radius: 100px;
 	border-radius: 100px;
-	-moz-box-shadow: inset 0 0 0 2px #ff7a46;
-	-webkit-box-shadow: inset 0 0 0 2px #ff7a46;
-	box-shadow: inset 0 0 0 2px #ff7a46;
+	-moz-box-shadow: inset 0 0 0 2px #02C18F;
+	-webkit-box-shadow: inset 0 0 0 2px #02C18F;
+	box-shadow: inset 0 0 0 2px #02C18F;
 }
 
 .valores-section .plano-preco span:hover {
 	font: bold 25px/130px Georgia, Serif;
 	color: #777;
 	background: #FFF9F6;        
-        -moz-box-shadow: inset 0 0 0 1px #ff7a46;
-	-webkit-box-shadow: inset 0 0 0 1px #ff7a46;
-	box-shadow: inset 0 0 0 1px #ff7a46;
+        -moz-box-shadow: inset 0 0 0 1px #02C18F;
+	-webkit-box-shadow: inset 0 0 0 1px #02C18F;
+	box-shadow: inset 0 0 0 1px #02C18F;
 
 }
 
@@ -532,17 +533,17 @@ table > tbody > tr > td{
 }
 
 footer{
-    background: #ff7a46;
+    background: #02C18F;
 }
 
 .footer{
-    background: #ff7a46;
+    background: #02C18F;
     color: #FFF9F6;
 }
 
 
 #weekdays_content {
-  border-left: 1px solid #ff7a46;
+  border-left: 1px solid #02C18F;
 }
 
 
@@ -554,4 +555,10 @@ footer{
 #weekdays_content li {
   list-style: outside none none;
   margin: 10px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%;
+    margin: auto;
 }

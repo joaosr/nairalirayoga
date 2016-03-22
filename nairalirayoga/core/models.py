@@ -86,11 +86,35 @@ class Professor(models.Model):
     created_at = models.DateTimeField('Criado em', auto_now_add=True)
 
     class Meta:
-        verbose_name_plural = 'Professor'
+        verbose_name_plural = 'Professores'
         verbose_name = 'Professor'
 
     def __str__(self):
         return self.nome + " " + self.sobrenome
+
+    def get_absolute_url(self):
+        return reverse("posts:detail", kwargs={"id": self.id})
+
+class Imagem(models.Model):
+    titulo = models.CharField('Título', max_length=50)
+    descricao = models.TextField('Descrição')
+    foto = models.ImageField('Foto', upload_to=upload_location,
+                             null=True,
+                             blank=True,
+                             height_field="height_field",
+                             width_field="width_field",
+                             default='no-img-professor.png')
+    carrosel = models.BooleanField('No Carrosel')
+    height_field = models.IntegerField('Largura', default=0)
+    width_field = models.IntegerField('Altura', default=0)
+    created_at = models.DateTimeField('Criado em', auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'Imagens'
+        verbose_name = 'Imagem'
+
+    def __str__(self):
+        return self.titulo
 
     def get_absolute_url(self):
         return reverse("posts:detail", kwargs={"id": self.id})

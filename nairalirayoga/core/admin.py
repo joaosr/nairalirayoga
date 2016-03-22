@@ -1,5 +1,5 @@
 from django.contrib import admin
-from nairalirayoga.core.models import Horario, Preco, Professor
+from nairalirayoga.core.models import Horario, Imagem, Preco, Professor
 
 class HorarioModelAdmin(admin.ModelAdmin):
     list_display = ('dia_semana', 'horario', 'local', 'descricao', 'created_at')
@@ -8,6 +8,14 @@ class HorarioModelAdmin(admin.ModelAdmin):
     list_filter = ('dia_semana',)
 
 admin.site.register(Horario, HorarioModelAdmin)
+
+class ImagemModelAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'descricao', 'foto', 'carrosel', 'width_field', 'height_field', 'created_at')
+    date_hierarchy = 'created_at'
+    search_fields = ('titulo', 'descricao', 'foto', 'carrosel', 'width_field', 'height_field', 'created_at')
+    list_filter = ('titulo',)
+
+admin.site.register(Imagem, ImagemModelAdmin)
 
 class PrecoModelAdmin(admin.ModelAdmin):
     list_display = ('valor', 'dias', 'atividade', 'created_at')
