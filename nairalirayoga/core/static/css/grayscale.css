@@ -66,7 +66,7 @@ a:focus {
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: #02C18F;
+    background-color: #FF7A46;
 }
 
 .navbar-custom .navbar-brand {
@@ -116,7 +116,7 @@ a:focus {
         border-bottom: 1px solid rgba(255,255,255,.3);
         letter-spacing: 1px;
         background: 0 0;
-        background-color: #02C18F;
+        background-color: #FF7A46;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -124,7 +124,7 @@ a:focus {
 
     .top-nav-collapse {
         padding: 0;
-        background-color: #02C18F;
+        background-color: #FF7A46;
     }
 
     .navbar-custom.top-nav-collapse {
@@ -300,17 +300,17 @@ a:focus {
 }
 
 .btn-default {
-    border: 1px solid #02C18F;
-    color: #02C18F;
+    border: 1px solid #FF7A46;
+    color: #FF7A46;
     background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #02C18F;
+    border: 1px solid #FF7A46;
     outline: 0;
     color: #fff;
-    background-color: #02C18F;
+    background-color: #FF7A46;
 }
 
 ul.banner-social-buttons {
@@ -416,7 +416,7 @@ table > tbody > tr > td{
   background: #fff;
 }
 .valores-section {
-	background: #02C18F;
+	background: #FF7A46;
 	text-align: center;
 	/*width: 892px; total computed width = 222 x 3 + 226 */
 }
@@ -468,18 +468,18 @@ table > tbody > tr > td{
    	font-size: 20px;
         color: #fff;
 	background-image: -moz-linear-gradient(#eee,#ddd);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#02C18F), to(#02C18F));    
-	background-image: -webkit-linear-gradient(#02C18F, #02C18F);
-	background-image: -o-linear-gradient(#02C18F, #02C18F);
-	background-image: -ms-linear-gradient(#02C18F, #02C18F);
-	background-image: linear-gradient(#02C18F, #02C18F);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#FF7A46), to(#FF7A46));    
+	background-image: -webkit-linear-gradient(#FF7A46, #FF7A46);
+	background-image: -o-linear-gradient(#FF7A46, #FF7A46);
+	background-image: -ms-linear-gradient(#FF7A46, #FF7A46);
+	background-image: linear-gradient(#FF7A46, #FF7A46);
 }*/
 
 .valores-section .plano-preco span {
 	display: block;
 	font: bold 25px/130px Georgia, Serif;
         color: #FFF9F6;
-	background: #02C18F; 
+	background: #FF7A46; 
 	border: 5px double #FFF9F6;
 	height: 130px;
 	width: 130px;
@@ -487,18 +487,18 @@ table > tbody > tr > td{
 	-moz-border-radius: 100px;
 	-webkit-border-radius: 100px;
 	border-radius: 100px;
-	-moz-box-shadow: inset 0 0 0 2px #02C18F;
-	-webkit-box-shadow: inset 0 0 0 2px #02C18F;
-	box-shadow: inset 0 0 0 2px #02C18F;
+	-moz-box-shadow: inset 0 0 0 2px #FF7A46;
+	-webkit-box-shadow: inset 0 0 0 2px #FF7A46;
+	box-shadow: inset 0 0 0 2px #FF7A46;
 }
 
 .valores-section .plano-preco span:hover {
 	font: bold 25px/130px Georgia, Serif;
 	color: #777;
 	background: #FFF9F6;        
-        -moz-box-shadow: inset 0 0 0 1px #02C18F;
-	-webkit-box-shadow: inset 0 0 0 1px #02C18F;
-	box-shadow: inset 0 0 0 1px #02C18F;
+        -moz-box-shadow: inset 0 0 0 1px #FF7A46;
+	-webkit-box-shadow: inset 0 0 0 1px #FF7A46;
+	box-shadow: inset 0 0 0 1px #FF7A46;
 
 }
 
@@ -533,17 +533,17 @@ table > tbody > tr > td{
 }
 
 footer{
-    background: #02C18F;
+    background: #FF7A46;
 }
 
 .footer{
-    background: #02C18F;
+    background: #FF7A46;
     color: #FFF9F6;
 }
 
 
 #weekdays_content {
-  border-left: 1px solid #02C18F;
+  border-left: 1px solid #FF7A46;
 }
 
 
