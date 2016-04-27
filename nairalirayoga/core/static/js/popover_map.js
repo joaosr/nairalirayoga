@@ -1,6 +1,6 @@
 $(function(){
 
-var gmap_content = '<script>$(function(){ var fenway = new google.maps.LatLng(-1.453860,-48.485119); $(".map-view").gmap3({  map:{options:{zoom: 17, mapTypeId: google.maps.MapTypeId.ROADMAP, streetViewControl: true, center: fenway } }, streetviewpanorama:{ options:{ container:$(".street-view"), opts:{ position:fenway, pov:{ heading:34, pitch: 10, zoom: 1 }}}}});});</script>';
+var gmap_content = '<script>$(function(){ var fenway = new google.maps.LatLng(-1.4543319,-48.484464); $(".map-view").gmap3({  map:{options:{zoom: 17, mapTypeId: google.maps.MapTypeId.ROADMAP, streetViewControl: true, center: fenway } }, streetviewpanorama:{ options:{ container:$(".street-view"), opts:{ position:fenway, pov:{ heading:160, pitch: 10, zoom: 1 }}}}});});</script>';
 
 var content_popover = '<div class="row">'+
                           '<div class="col-lg-6">'+
