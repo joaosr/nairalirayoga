@@ -543,7 +543,9 @@ footer{
 
 
 #weekdays_content {
-  border-left: 1px solid #FF7A46;
+    border-left: 1px solid #FF7A46;
+    background-color: #fff;
+    margin-bottom: 10px;
 }
 
 
@@ -552,9 +554,13 @@ footer{
   border-left: 1px solid #BBB;
 }
 
+#description p{
+    margin-bottom: 0px;
+}
+
 #weekdays_content li {
   list-style: outside none none;
-  margin: 10px;
+  padding: 10px;
 }
 
 .carousel-inner > .item > img,
