@@ -10,7 +10,7 @@ class Horario(models.Model):
     QUINTA = 'Qui'
     SEXTA = 'Sex'
     SABADO = 'Sáb'
-    DOMINGO = 'Sex'
+    DOMINGO = 'Dom'
     DAYS_OF_WEEK = (
         (SEGUNDA, 'Segunda-feira'),
         (TERCA, 'Terça-feira'),
