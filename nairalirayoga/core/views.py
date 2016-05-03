@@ -1,9 +1,16 @@
+# -*- coding: utf-8 -*-
 from django.shortcuts import render
 from nairalirayoga.core.models import Horario, Imagem, Preco, Professor
 
 
 def home(request):
-    h = Horario.objects.values_list('dia_semana', flat=True).order_by('dia_semana').distinct()
+    days_ord = ['Seg', 'Ter', 'Quar', 'Qui', 'Sex', 'Sáb', 'Dom']
+    h_tmp = Horario.objects.values_list('dia_semana', flat=True).order_by('dia_semana').distinct()
+    h = []
+    for key in days_ord:
+        if key in h_tmp:
+            h.append(key)
+
     p = Preco.objects.values_list('atividade', flat=True).order_by('atividade').distinct()
     imagens = Imagem.objects.filter(carrosel=True).values().order_by('id')
     nimagens = range(len(imagens))
