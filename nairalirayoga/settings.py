@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'test_without_migrations',
     'nairalirayoga.core',
+    'django_markdown',
 ]
 
 MIDDLEWARE_CLASSES = [

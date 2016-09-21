@@ -1,5 +1,17 @@
 from django.contrib import admin
-from nairalirayoga.core.models import Horario, Imagem, Preco, Professor
+from django_markdown.admin import MarkdownModelAdmin
+from django_markdown.models import MarkdownField
+from nairalirayoga.core.models import Horario, Imagem, Preco, Professor, Blog
+from django_markdown.widgets import AdminMarkdownWidget
+from django.db.models import TextField
+
+
+class BlogAdmin(MarkdownModelAdmin):
+    list_display = ("title", "created")
+    prepopulated_fields = {"slug": ("title",)}
+    formfield_overrides = {TextField: {'widget': AdminMarkdownWidget}}
+
+admin.site.register(Blog, BlogAdmin)
 
 class HorarioModelAdmin(admin.ModelAdmin):
     list_display = ('dia_semana', 'horario', 'local', 'descricao', 'created_at')
