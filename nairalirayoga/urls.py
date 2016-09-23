@@ -20,7 +20,6 @@ from nairalirayoga.core.views import home, gallery
 urlpatterns = [
     url(r'^$', home),
     url(r'^foto_galeria', gallery),
-    url(r'^admin/', admin.site.urls),
-    url(r'^markdown/', include( 'django_markdown.urls')),
+    url(r'^admin/', admin.site.urls)
 ]
 

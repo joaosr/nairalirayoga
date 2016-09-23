@@ -1,15 +1,13 @@
 from django.contrib import admin
 from django_markdown.admin import MarkdownModelAdmin
-from django_markdown.models import MarkdownField
 from nairalirayoga.core.models import Horario, Imagem, Preco, Professor, Blog
-from django_markdown.widgets import AdminMarkdownWidget
+from pagedown.widgets import AdminPagedownWidget
 from django.db.models import TextField
-
 
 class BlogAdmin(MarkdownModelAdmin):
     list_display = ("title", "created")
     prepopulated_fields = {"slug": ("title",)}
-    formfield_overrides = {TextField: {'widget': AdminMarkdownWidget}}
+    formfield_overrides = {TextField: {'widget': AdminPagedownWidget }}
 
 admin.site.register(Blog, BlogAdmin)
 
