@@ -1,4 +1,15 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block link %}
+
+    <!-- Custom CSS -->
+    <link href="{% static 'css/grayscale.css' %}" rel="stylesheet">
+
+    <!-- Pongstagr CSS -->
+    {% load staticfiles %}
+    <link href="{% static 'css/pongstagr.am.min.css' %}" rel="stylesheet">
+{% endblock %}
 
 {% block menu %}
     <!-- Collect the nav links, forms, and other content for toggling -->
