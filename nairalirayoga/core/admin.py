@@ -5,7 +5,7 @@ from pagedown.widgets import AdminPagedownWidget
 from django.db.models import TextField
 
 class BlogAdmin(MarkdownModelAdmin):
-    list_display = ("title", "created")
+    list_display = ("title", "slug", "created")
     prepopulated_fields = {"slug": ("title",)}
     formfield_overrides = {TextField: {'widget': AdminPagedownWidget }}
 

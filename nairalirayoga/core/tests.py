@@ -1,7 +1,28 @@
 from datetime import datetime
 
 from django.test import TestCase
-from nairalirayoga.core.models import Horario, Preco, Professor, Imagem
+from nairalirayoga.core.models import Horario, Preco, Professor, Imagem, Blog
+
+
+class BlogModelTest(TestCase):
+    def setUp(self):
+        self.obj = Blog(
+            title='Yoga é vida',
+            body='19:00',
+            publish=True,
+            slug="yoga-e-vida"
+        )
+        self.obj.save()
+
+    def test_create(self):
+        self.assertTrue(Blog.objects.exists())
+
+    def test_created_at(self):
+        """ Horario must have an auto created at attr."""
+        self.assertIsInstance(self.obj.created, datetime)
+
+    def test_str(self):
+        self.assertEqual('Yoga é vida', str(self.obj))
 
 class HorarioModelTest(TestCase):
     def setUp(self):

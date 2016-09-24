@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load markdown_deux_tags %}
+
+{% block content %}
+{% for object in object_list %}
+  <div class="post" style='margin-top: 100px;'>
+    <h2><a href="{% url "post_detail" slug=object.slug %}">{{ object.title }}</a></h2>
+    <p class="meta">{{ object.created }}</p>
+    {{ object.body|markdown|truncatechars:140 }}
+  </div>
+{% endfor %}
+{% endblock %}
