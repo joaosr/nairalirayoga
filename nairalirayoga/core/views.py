@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
+from django.views import generic
 from django.shortcuts import render
-from nairalirayoga.core.models import Horario, Imagem, Preco, Professor
+from django.views import generic
+from nairalirayoga.core.models import Horario, Imagem, Preco, Professor, Blog
 
 
 def home(request):
@@ -41,3 +43,13 @@ def home(request):
 
 def gallery(request):
     return render(request, 'gallery.html')
+
+class BlogPost(generic.DetailView):
+    model = Blog
+    template_name = "post.html"
+
+
+class BlogIndex(generic.ListView):
+    queryset = Blog.objects.published()
+    template_name = "blog.html"
+    paginate_by = 3

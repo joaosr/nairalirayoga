@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% load markdown_deux_tags %}
+
+{% block link %}
+    <!-- Custom CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <header class="intro-header" style="background-image: url({% static 'img/blog_cover.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Naira Lira Blog</h1>
+                        <hr class="small">
+                        <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div style='margin-top: 100px;' class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                {% for object in object_list %}
+                    <div class="post-preview">
+                        <a href="{% url "post_detail" slug=object.slug %}">
+                            <h2 class="post-title">
+                                {{ object.title }}
+                            </h2>
+                            <h4 class="post-subtitle">
+                                {{ object.body|markdown|truncatechars:140 }}
+                            </h4>
+                        </a>
+
+                        <p class="post-meta">Posted by <a href="#">Naira Lira</a> {{ object.created }}</p>
+                    </div>
+                    <hr>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

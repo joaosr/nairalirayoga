@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% load markdown_deux_tags %}
+
+{% block title %}{{ object.title }}{% endblock %}
+
+{% block link %}
+    <!-- Custom CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <header class="intro-header" style="background-image: url({% static 'img/blog_cover.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>{{ object.title }}</h1>
+                        <span class="meta">Posted by <a href="#">Naira Lira</a>{{ object.created }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    {{ object.body|markdown }}
+                </div>
+            </div>
+        </div>
+    </article>
+    <hr>
+{% endblock %}

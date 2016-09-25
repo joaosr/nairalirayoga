@@ -1,5 +1,14 @@
 from django.contrib import admin
-from nairalirayoga.core.models import Horario, Imagem, Preco, Professor
+from nairalirayoga.core.models import Horario, Imagem, Preco, Professor, Blog
+from pagedown.widgets import AdminPagedownWidget
+from django.db.models import TextField
+
+class BlogAdmin(admin.ModelAdmin):
+    list_display = ("title", "slug", "created")
+    prepopulated_fields = {"slug": ("title",)}
+    formfield_overrides = {TextField: {'widget': AdminPagedownWidget }}
+
+admin.site.register(Blog, BlogAdmin)
 
 class HorarioModelAdmin(admin.ModelAdmin):
     list_display = ('dia_semana', 'horario', 'local', 'descricao', 'created_at')

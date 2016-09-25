@@ -3,6 +3,31 @@ from django.db import models
 from django.core.urlresolvers import reverse
 
 
+class BlogQuerySet(models.QuerySet):
+    def published(self):
+        return self.filter(publish=True)
+
+class Blog(models.Model):
+    title = models.CharField('Título', max_length=200)
+    body = models.TextField('Conteúdo')
+    slug = models.SlugField('Slug', max_length=200, unique=True)
+    publish = models.BooleanField('Publicado', default=False)
+    created = models.DateTimeField('Criado em', auto_now_add=True)
+    modified = models.DateTimeField('Modificado', auto_now=True)
+
+    objects = BlogQuerySet.as_manager()
+
+    def get_absolute_url(self):
+        return reverse("post_detail", kwargs={"slug": self.slug})
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "blog"
+        verbose_name_plural = "blogs"
+        ordering = ["-created"]
+
 class Horario(models.Model):
     SEGUNDA = 'Seg'
     TERCA = 'Ter'
