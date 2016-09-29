@@ -1,4 +1,4 @@
-var fenway = new google.maps.LatLng(-1.453860,-48.485118);
+var fenway = new google.maps.LatLng(-1.4543319,-48.484464);
 
 $(".contatos").gmap3({
     map:{
@@ -15,7 +15,7 @@ $(".contatos").gmap3({
               opts:{
                     position: fenway,
                     pov: {
-                          heading: 34,
+                          heading: 173.88,
                           pitch: 10,
                           zoom: 1
                     }
