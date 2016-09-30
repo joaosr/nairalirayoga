@@ -5,6 +5,9 @@ from django.db.models import TextField
 
 class BlogAdmin(admin.ModelAdmin):
     list_display = ("title", "slug", "created")
+    date_hierarchy = 'created'
+    list_filter = ('publish',)
+    search_fields = ('title', 'body', 'slug')
     prepopulated_fields = {"slug": ("title",)}
     formfield_overrides = {TextField: {'widget': AdminPagedownWidget }}
 
